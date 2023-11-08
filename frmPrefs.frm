@@ -14,70 +14,6 @@ Begin VB.Form planetPrefs
    ScaleWidth      =   8970
    StartUpPosition =   3  'Windows Default
    Visible         =   0   'False
-   Begin VB.Frame fraGeneral 
-      Caption         =   "General"
-      Height          =   2070
-      Left            =   240
-      TabIndex        =   52
-      Top             =   1200
-      Visible         =   0   'False
-      Width           =   7500
-      Begin VB.Frame fraGeneralInner 
-         BorderStyle     =   0  'None
-         Height          =   1500
-         Left            =   465
-         TabIndex        =   53
-         Top             =   300
-         Width           =   6600
-         Begin VB.CheckBox chkGenStartup 
-            Caption         =   "Run this widget at Windows Startup *"
-            Height          =   195
-            Left            =   2010
-            TabIndex        =   95
-            ToolTipText     =   "Check this box to enable the automatic start of the program when Windows is started."
-            Top             =   1140
-            Width           =   3555
-         End
-         Begin VB.CheckBox chkGaugeFunctions 
-            Caption         =   "Double Click Enabled *"
-            Height          =   225
-            Left            =   1995
-            TabIndex        =   54
-            ToolTipText     =   "When checked this box enables the spinning earth functionality. That's it!"
-            Top             =   180
-            Width           =   3405
-         End
-         Begin VB.Label lblGeneral 
-            Caption         =   "Stamp Functions :"
-            Height          =   315
-            Index           =   6
-            Left            =   510
-            TabIndex        =   97
-            Top             =   165
-            Width           =   1320
-         End
-         Begin VB.Label lblGeneral 
-            Caption         =   "Auto Start :"
-            Height          =   345
-            Index           =   11
-            Left            =   1140
-            TabIndex        =   96
-            Tag             =   "lblRefreshInterval"
-            Top             =   1140
-            Width           =   1740
-         End
-         Begin VB.Label lblGeneral 
-            Caption         =   "When checked this box enables the double click functionality. That's it! *"
-            Height          =   660
-            Index           =   2
-            Left            =   2025
-            TabIndex        =   55
-            Tag             =   "lblEnableSoundsDesc"
-            Top             =   540
-            Width           =   3615
-         End
-      End
-   End
    Begin VB.Frame fraAbout 
       Caption         =   "About"
       Height          =   8580
@@ -558,6 +494,70 @@ Begin VB.Form planetPrefs
             Tag             =   "lblAlarmSound"
             Top             =   45
             Width           =   1740
+         End
+      End
+   End
+   Begin VB.Frame fraGeneral 
+      Caption         =   "General"
+      Height          =   2070
+      Left            =   240
+      TabIndex        =   52
+      Top             =   1200
+      Visible         =   0   'False
+      Width           =   7500
+      Begin VB.Frame fraGeneralInner 
+         BorderStyle     =   0  'None
+         Height          =   1500
+         Left            =   465
+         TabIndex        =   53
+         Top             =   300
+         Width           =   6600
+         Begin VB.CheckBox chkGenStartup 
+            Caption         =   "Run this widget at Windows Startup *"
+            Height          =   195
+            Left            =   2010
+            TabIndex        =   95
+            ToolTipText     =   "Check this box to enable the automatic start of the program when Windows is started."
+            Top             =   1140
+            Width           =   3555
+         End
+         Begin VB.CheckBox chkGaugeFunctions 
+            Caption         =   "Double Click Enabled *"
+            Height          =   225
+            Left            =   1995
+            TabIndex        =   54
+            ToolTipText     =   "When checked this box enables the spinning earth functionality. That's it!"
+            Top             =   180
+            Width           =   3405
+         End
+         Begin VB.Label lblGeneral 
+            Caption         =   "Stamp Functions :"
+            Height          =   315
+            Index           =   6
+            Left            =   510
+            TabIndex        =   97
+            Top             =   165
+            Width           =   1320
+         End
+         Begin VB.Label lblGeneral 
+            Caption         =   "Auto Start :"
+            Height          =   345
+            Index           =   11
+            Left            =   1140
+            TabIndex        =   96
+            Tag             =   "lblRefreshInterval"
+            Top             =   1140
+            Width           =   1740
+         End
+         Begin VB.Label lblGeneral 
+            Caption         =   "When checked this box enables the double click functionality. That's it! *"
+            Height          =   660
+            Index           =   2
+            Left            =   2025
+            TabIndex        =   55
+            Tag             =   "lblEnableSoundsDesc"
+            Top             =   540
+            Width           =   3615
          End
       End
    End
@@ -2116,7 +2116,7 @@ Private Sub chkWidgetHidden_Click()
         gblPlWidgetHidden = "1"
     End If
     
-    sPutINISetting "Software\planet", "widgetHidden", gblPlWidgetHidden, gblPlSettingsFile
+    sPutINISetting softwarePlanet, "widgetHidden", gblPlWidgetHidden, gblPlSettingsFile
     
     btnSave.Enabled = True ' enable the save button
 
@@ -2607,48 +2607,48 @@ Private Sub btnSave_Click()
 
     ' save the values from the general tab
     If fFExists(gblPlSettingsFile) Then
-        sPutINISetting "Software\planet", "enableTooltips", gblPlEnableTooltips, gblPlSettingsFile
-        sPutINISetting "Software\planet", "enableBalloonTooltips", gblPlEnableBalloonTooltips, gblPlSettingsFile
-        sPutINISetting "Software\planet", "showTaskbar", gblPlShowTaskbar, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "enableTooltips", gblPlEnableTooltips, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "enableBalloonTooltips", gblPlEnableBalloonTooltips, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "showTaskbar", gblPlShowTaskbar, gblPlSettingsFile
         
-        sPutINISetting "Software\planet", "gaugeSize", gblPlGaugeSize, gblPlSettingsFile
-        sPutINISetting "Software\planet", "scrollWheelDirection", gblPlScrollWheelDirection, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "gaugeSize", gblPlGaugeSize, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "scrollWheelDirection", gblPlScrollWheelDirection, gblPlSettingsFile
                 
-        sPutINISetting "Software\planet", "gaugeFunctions", gblPlGaugeFunctions, gblPlSettingsFile
-        sPutINISetting "Software\planet", "planetSelection", gblPlanetSelection, gblPlSettingsFile
-        'sPutINISetting "Software\planet", "widgetSkew", 'PrWidgetSkew, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "gaugeFunctions", gblPlGaugeFunctions, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "planetSelection", gblPlanetSelection, gblPlSettingsFile
+        'sPutINISetting softwarePlanet, "widgetSkew", 'PrWidgetSkew, gblPlSettingsFile
         
-        sPutINISetting "Software\planet", "aspectHidden", gblPlAspectHidden, gblPlSettingsFile
-        sPutINISetting "Software\planet", "widgetPosition", gblPlWidgetPosition, gblPlSettingsFile
-        sPutINISetting "Software\planet", "widgetLandscape", gblPlWidgetLandscape, gblPlSettingsFile
-        sPutINISetting "Software\planet", "widgetPortrait", gblPlWidgetPortrait, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "aspectHidden", gblPlAspectHidden, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "widgetPosition", gblPlWidgetPosition, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "widgetLandscape", gblPlWidgetLandscape, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "widgetPortrait", gblPlWidgetPortrait, gblPlSettingsFile
 
-        sPutINISetting "Software\planet", "prefsFont", gblPlPrefsFont, gblPlSettingsFile
-        sPutINISetting "Software\planet", "prefsFontSize", gblPlPrefsFontSize, gblPlSettingsFile
-        sPutINISetting "Software\planet", "prefsFontItalics", gblPlPrefsFontItalics, gblPlSettingsFile
-        sPutINISetting "Software\planet", "prefsFontColour", gblPlPrefsFontColour, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFont", gblPlPrefsFont, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFontSize", gblPlPrefsFontSize, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFontItalics", gblPlPrefsFontItalics, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFontColour", gblPlPrefsFontColour, gblPlSettingsFile
 
         'save the values from the Windows Config Items
-        sPutINISetting "Software\planet", "windowLevel", gblPlWindowLevel, gblPlSettingsFile
-        sPutINISetting "Software\planet", "preventDragging", gblPlPreventDragging, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "windowLevel", gblPlWindowLevel, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "preventDragging", gblPlPreventDragging, gblPlSettingsFile
         
-        sPutINISetting "Software\planet", "opacity", gblPlOpacity, gblPlSettingsFile
-        sPutINISetting "Software\planet", "widgetHidden", gblPlWidgetHidden, gblPlSettingsFile
-        sPutINISetting "Software\planet", "hidingTime", gblPlHidingTime, gblPlSettingsFile
-        sPutINISetting "Software\planet", "ignoreMouse", gblPlIgnoreMouse, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "opacity", gblPlOpacity, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "widgetHidden", gblPlWidgetHidden, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "hidingTime", gblPlHidingTime, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "ignoreMouse", gblPlIgnoreMouse, gblPlSettingsFile
         
-        sPutINISetting "Software\planet", "startup", gblPlStartup, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "startup", gblPlStartup, gblPlSettingsFile
 
-        sPutINISetting "Software\planet", "enableSounds", gblPlEnableSounds, gblPlSettingsFile
-        sPutINISetting "Software\planet", "lastSelectedTab", gblPlLastSelectedTab, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "enableSounds", gblPlEnableSounds, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "lastSelectedTab", gblPlLastSelectedTab, gblPlSettingsFile
         
-        sPutINISetting "Software\planet", "debug", gblPlDebug, gblPlSettingsFile
-        sPutINISetting "Software\planet", "dblClickCommand", gblPlDblClickCommand, gblPlSettingsFile
-        sPutINISetting "Software\planet", "openFile", gblPlOpenFile, gblPlSettingsFile
-        sPutINISetting "Software\planet", "defaultEditor", gblPlDefaultEditor, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "debug", gblPlDebug, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "dblClickCommand", gblPlDblClickCommand, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "openFile", gblPlOpenFile, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "defaultEditor", gblPlDefaultEditor, gblPlSettingsFile
         
-        sPutINISetting "Software\planet", "maximiseFormX", gblPlMaximiseFormX, gblPlSettingsFile
-        sPutINISetting "Software\planet", "maximiseFormY", gblPlMaximiseFormY, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "maximiseFormX", gblPlMaximiseFormX, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "maximiseFormY", gblPlMaximiseFormY, gblPlSettingsFile
 
         'save the values from the Text Items
 
@@ -2725,10 +2725,10 @@ Private Sub btnPrefsFont_Click()
     gblPlPrefsFontColour = CStr(fntColour)
 
     If fFExists(gblPlSettingsFile) Then ' does the tool's own settings.ini exist?
-        sPutINISetting "Software\planet", "prefsFont", gblPlPrefsFont, gblPlSettingsFile
-        sPutINISetting "Software\planet", "prefsFontSize", gblPlPrefsFontSize, gblPlSettingsFile
-        sPutINISetting "Software\planet", "prefsFontItalics", gblPlPrefsFontItalics, gblPlSettingsFile
-        sPutINISetting "Software\planet", "PrefsFontColour", gblPlPrefsFontColour, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFont", gblPlPrefsFont, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFontSize", gblPlPrefsFontSize, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "prefsFontItalics", gblPlPrefsFontItalics, gblPlSettingsFile
+        sPutINISetting softwarePlanet, "PrefsFontColour", gblPlPrefsFontColour, gblPlSettingsFile
     End If
     
     If fntFont = vbNullString Then fntFont = "arial"
@@ -3210,7 +3210,7 @@ Private Sub lblGitHub_dblClick()
     
     answer = MsgBox("This option opens a browser window and take you straight to Github. Proceed?", vbExclamation + vbYesNo)
     If answer = vbYes Then
-       Call ShellExecute(Me.hwnd, "Open", "https://github.com/yereverluvinunclebert/planet-VB6-Widget", vbNullString, App.Path, 1)
+       Call ShellExecute(Me.hwnd, "Open", "https://github.com/yereverluvinunclebert/uranus-VB6-Widget", vbNullString, App.Path, 1)
     End If
 End Sub
 
@@ -3628,7 +3628,7 @@ Private Sub picButtonMouseUpEvent(ByVal thisTabName As String, ByRef thisPicName
     Call clearBorderStyle
 
     gblPlLastSelectedTab = thisTabName
-    sPutINISetting "Software\planet", "lastSelectedTab", gblPlLastSelectedTab, gblPlSettingsFile
+    sPutINISetting softwarePlanet, "lastSelectedTab", gblPlLastSelectedTab, gblPlSettingsFile
 
     thisFraName.Visible = True
     thisFraButtonName.BorderStyle = 1
@@ -3992,7 +3992,7 @@ Private Sub setThemeShade(ByVal redC As Integer, ByVal greenC As Integer, ByVal 
     planetPrefs.sliOpacity.BackColor = RGB(redC, greenC, blueC)
     planetPrefs.txtAboutText.BackColor = RGB(redC, greenC, blueC)
     
-    sPutINISetting "Software\planet", "skinTheme", gblPlSkinTheme, gblPlSettingsFile ' now saved to the toolsettingsfile
+    sPutINISetting softwarePlanet, "skinTheme", gblPlSkinTheme, gblPlSettingsFile ' now saved to the toolsettingsfile
 
     On Error GoTo 0
     Exit Sub
