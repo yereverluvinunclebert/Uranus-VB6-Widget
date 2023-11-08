@@ -1,7 +1,7 @@
 # Uranus-Widget-VB6
 The Steampunk Uranus Desktop Widget, written in VB6 for Windows and ReactOS. Created for XP, Vista, Win7, 8, 10/11+, ReactOS as well as Linux or the Apple Mac's OS/X with Wine. This Uranus Desktop Widget is an attractive and steamy VB6 widget for your desktop. This VB6 widget provides a simple moveable marble globe complete with rings
 
-![Uranus](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/44e30cb2-2932-4148-a47f-cd8b96665b8a)
+![uranus](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/05c93fe8-0d61-4331-a77d-b680fd4c4086)
 
 The others are the Uranus, Jupiter, Saturn and of course, 'God of War', the planet Uranus. 
 Double-clicking on the planet will cause a personalised Windows application 
@@ -47,7 +47,8 @@ Why VB6? Well, with a 64 bit, modern-language improvement upgrade on the way in 
  is new VB6 widgets with more functionality and then hopefully, conversion of 
  each to RADBasic/TwinBasic for future-proofing and 64bit-ness. 
 
-![theWholeShebang](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/5f6190e1-1091-4b7a-8a14-5ed05d6d32d1)
+![theWholeShebang](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/e037daf8-792e-4597-baec-4c218b158651)
+
 
  This utility is one of a set of steampunk and dieselpunk widgets. That you can 
  find here on Deviantart: https://www.deviantart.com/yereverluvinuncleber/gallery
@@ -93,7 +94,7 @@ If you are just a casual user of desktop programs then simply download the SETUP
 	Windows 10 Home 64bit on AMD    
 	Windows 11 64bit on Intel  
 
-![prefs-about](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/e90617d6-b9fd-45b8-bf1c-65d6375d87f8)
+![about](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/71e0b04c-ec5c-4b5a-b3aa-6a045cdfadbb)
 
  CREDITS:
  
@@ -212,7 +213,8 @@ If you are just a casual user of desktop programs then simply download the SETUP
  With regard to the commercial use of incorporated images, permission and a 
  licence would need to be obtained from the original owner and creator, ie. me.
 
-![Uranus-on-desktop](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/6b73623c-4a47-4672-8809-ca0c532e0f66)
+![desktop](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/8e088bd9-6f33-4dd8-9bfa-85051641ef98)
+
 
 
  
