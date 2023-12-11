@@ -4262,40 +4262,40 @@ End Sub
 '---------------------------------------------------------------------------------------
 '
 Private Sub loadHigherResPrefsImages()
-    Dim ratio As Double: ratio = 0
-    Dim resourcePath As String: resourcePath = vbNullString
+'    Dim ratio As Double: ratio = 0
+'    Dim resourcePath As String: resourcePath = vbNullString
     
     On Error GoTo loadHigherResPrefsImages_Error
    
-    resourcePath = App.Path & "\resources\images"
+'    resourcePath = App.Path & "\resources\images"
    
     If WindowState = vbMinimized Then Exit Sub
     
     'ratio = cFormHeight / cFormWidth
 
-    If dynamicSizingFlg = False Then
-        Exit Sub
-    End If
+'    If dynamicSizingFlg = False Then
+'        Exit Sub
+'    End If
     
-    If Me.Width < 10500 Then
-        topIconWidth = 600
-    End If
-    
-    If Me.Width >= 10500 And Me.Width < 12000 Then 'Me.Height / ratio ' maintain the aspect ratio
-        topIconWidth = 730
-    End If
-            
-    If Me.Width >= 12000 And Me.Width < 13500 Then 'Me.Height / ratio ' maintain the aspect ratio
-        topIconWidth = 834
-    End If
-            
-    If Me.Width >= 13500 And Me.Width < 15000 Then 'Me.Height / ratio ' maintain the aspect ratio
-        topIconWidth = 940
-    End If
-            
-    If Me.Width >= 15000 Then 'Me.Height / ratio ' maintain the aspect ratio
-        topIconWidth = 1010
-    End If
+'    If Me.Width < 10500 Then
+'        topIconWidth = 600
+'    End If
+'
+'    If Me.Width >= 10500 And Me.Width < 12000 Then 'Me.Height / ratio ' maintain the aspect ratio
+'        topIconWidth = 730
+'    End If
+'
+'    If Me.Width >= 12000 And Me.Width < 13500 Then 'Me.Height / ratio ' maintain the aspect ratio
+'        topIconWidth = 834
+'    End If
+'
+'    If Me.Width >= 13500 And Me.Width < 15000 Then 'Me.Height / ratio ' maintain the aspect ratio
+'        topIconWidth = 940
+'    End If
+'
+'    If Me.Width >= 15000 Then 'Me.Height / ratio ' maintain the aspect ratio
+'        topIconWidth = 1010
+'    End If
     
     If planetPrefs.mnuDark.Checked = True Then
         Call setPrefsIconImagesDark
