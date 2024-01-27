@@ -37,8 +37,7 @@ Why VB6? Well, with a 64 bit, modern-language improvement upgrade on the way in 
  This version was developed on Windows 7 using 32 bit VisualBasic 6 as a FOSS 
  project creating a WoW64 widget for the desktop.
 
-![Uranus-help-750](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/629d7deb-2ac2-460b-8259-d7f06a3fa84e)
-
+![uranus-help-750](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/340a0799-37c1-45c8-8eb7-51622b215a40)
 
  It is open source to allow easy configuration, bug-fixing, enhancement and 
  community contribution towards free-and-useful VB6 utilities that can be created
