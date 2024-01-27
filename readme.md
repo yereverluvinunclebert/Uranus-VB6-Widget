@@ -52,7 +52,8 @@ Why VB6? Well, with a 64 bit, modern-language improvement upgrade on the way in 
  This utility is one of a set of steampunk and dieselpunk widgets. That you can 
  find here on Deviantart: https://www.deviantart.com/yereverluvinuncleber/gallery
 
-![vb6-logo](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/d17f9120-7c35-4dce-bc7f-d9394d8118d1)
+![vb6-logo-350](https://github.com/yereverluvinunclebert/Uranus-VB6-Widget/assets/2788342/3827d403-d976-46e3-ade0-3c00d5b7b17a)
+
  
  I do hope you enjoy using this utility and others. Your own software 
  enhancements and contributions will be gratefully received if you choose to 
